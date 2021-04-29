@@ -15,12 +15,17 @@ export default function Home(props) {
   // }, []);
 
   return (
-   <div>
+    <div>
       <h1>Index</h1>
-    <p>{JSON.stringify(props.episodes)}</p>
-   </div>
+      
+      {/* show api result */}
+      <p>{JSON.stringify(props.episodes)}</p>
+
+    </div>
   )
+
 }
+
 
 /**
  * Consumindo uma API com next
@@ -29,7 +34,7 @@ export default function Home(props) {
 // export  async function getServerSideProps() {
 //   const response = await fetch('http://localhost:3333/episodes')
 //   const data = await response.json();
- 
+
 //   return {
 //     props: {
 //       episodes: data,
@@ -42,10 +47,10 @@ export default function Home(props) {
  * Consumindo uma API com next
  * SSG - Static Side Generation 
  */
- export  async function getStaticProps() {
+export async function getStaticProps() {
   const response = await fetch('http://localhost:3333/episodes')
   const data = await response.json();
- 
+
   return {
     props: {
       episodes: data,
