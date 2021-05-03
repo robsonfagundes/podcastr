@@ -48,7 +48,7 @@ export default function Episode({ episode }: EpisodeProps) {
           objectFit="cover"
         />
         <button type="button">
-          <img src="/play.svg" alt="Tocar Episodio" />
+          <img src="/play.svg" alt="Tocar Episódio" />
         </button>
       </div>
 
