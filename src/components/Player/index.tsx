@@ -24,7 +24,7 @@ export function Player() {
 
       {episode ? (
         <div className={styles.currentEpisode}>
-          <Image 
+          <Image
             width={592}
             height={592}
             src={episode.thumbnail}
@@ -39,16 +39,16 @@ export function Player() {
         </div>
       )}
 
-      <footer className={! episode ? styles.empty : ''}>
+      <footer className={!episode ? styles.empty : ''}>
 
         <div className={styles.progress}>
           <span>00:00</span>
           <div className={styles.slider} >
             {episode ? (
-              <Slider 
-                trackStyle={{backgroundColor: '#04D361'}}
-                railStyle={{background: '#9F75FF'}}
-                handleStyle={{borderColor: '#04D361', borderWidth: 4}}
+              <Slider
+                trackStyle={{ backgroundColor: '#04D361' }}
+                railStyle={{ background: '#9F75FF' }}
+                handleStyle={{ borderColor: '#04D361', borderWidth: 4 }}
               />
             ) : (
               <div className={styles.emptySlider} />
@@ -56,8 +56,8 @@ export function Player() {
           </div>
           <span>00:00</span>
         </div>
-
-        { episode && (
+        
+        {episode && (
           <audio
             src={episode.url}
             autoPlay
@@ -71,7 +71,7 @@ export function Player() {
           <button type="button" disabled={!episode}>
             <img src="/play-previous.svg" alt="Tocar anterior" />
           </button>
-          <button type="button" className={styles.playButton} disabled={!episode}>
+          <button type="button" className={styles.playButton} >
             <img src="/play.svg" alt="Tocar" />
           </button>
           <button type="button" disabled={!episode}>
@@ -81,7 +81,7 @@ export function Player() {
             <img src="/repeat.svg" alt="Repetir" />
           </button>
         </div>
-        
+
       </footer>
 
     </div>
