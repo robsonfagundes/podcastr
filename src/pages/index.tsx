@@ -11,7 +11,6 @@ import Link from 'next/link';
 import { useContext } from 'react';
 import { PlayerContext } from '../context/PlayerContext';
 
-
 type Episode = {
   id: string;
   title: string,
